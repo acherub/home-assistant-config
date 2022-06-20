@@ -1,0 +1,145 @@
+{
+    "version": 1,
+    "minor_version": 1,
+    "key": "lovelace",
+    "data": {
+        "config": {
+            "title": "Home",
+            "views": [
+                {
+                    "path": "default_view",
+                    "title": "Home",
+                    "cards": [
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "switch.fan_outlet",
+                                "vacuum.sao_di_ji_jie_ren",
+                                "remote.broadlink_remote"
+                            ],
+                            "title": "\u5ba2\u5ef3"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "person.chunhsien_chi"
+                            ]
+                        },
+                        {
+                            "type": "weather-forecast",
+                            "entity": "weather.home",
+                            "show_forecast": false
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "sensor.hacs"
+                            ],
+                            "title": "\u611f\u6e2c\u5668"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "script.fan_up"
+                                },
+                                {
+                                    "entity": "script.fan_power_on"
+                                },
+                                {
+                                    "entity": "script.fan_down"
+                                },
+                                {
+                                    "entity": "script.fan_swing"
+                                }
+                            ],
+                            "state_color": true
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "switch.plug_1",
+                                "switch.plug_2",
+                                "switch.plug_3",
+                                "switch.plug_4",
+                                "switch.plug_5",
+                                "switch.plug_6"
+                            ],
+                            "title": "TP-LINK_Power Strip_E1A3"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "switch.tp_link_power_strip_e1a3_led",
+                                    "name": "LED"
+                                },
+                                {
+                                    "type": "section"
+                                },
+                                {
+                                    "entity": "switch.plug_1",
+                                    "type": "custom:multiple-entity-row",
+                                    "name": "Plug 1",
+                                    "toggle": true,
+                                    "state_color": true,
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.plug_1_voltage",
+                                            "name": false
+                                        },
+                                        {
+                                            "entity": "sensor.plug_1_current",
+                                            "name": false
+                                        },
+                                        {
+                                            "entity": "sensor.plug_1_current_consumption",
+                                            "name": "Instant"
+                                        },
+                                        {
+                                            "entity": "sensor.plug_1_today_s_consumption",
+                                            "name": "Day"
+                                        },
+                                        {
+                                            "entity": "sensor.plug_1_total_consumption",
+                                            "name": "Total"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "entity": "switch.plug_2",
+                                    "type": "custom:multiple-entity-row",
+                                    "name": "Deco",
+                                    "toggle": true,
+                                    "state_color": true,
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.plug_2_voltage",
+                                            "name": false
+                                        },
+                                        {
+                                            "entity": "sensor.plug_2_current",
+                                            "name": false
+                                        },
+                                        {
+                                            "entity": "sensor.plug_2_current_consumption",
+                                            "name": "Instant"
+                                        },
+                                        {
+                                            "entity": "sensor.plug_2_today_s_consumption",
+                                            "name": "Day"
+                                        },
+                                        {
+                                            "entity": "sensor.plug_2_total_consumption",
+                                            "name": "Total"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

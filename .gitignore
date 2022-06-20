@@ -1,5 +1,9 @@
+.storage
+
 # Share this file
 !.gitignore
+!.storage/broadlink_remote_ec0bae84f1ad_*
+!.storage/lovelace
 
 # Generic ignores
 *.log
