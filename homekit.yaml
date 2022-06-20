@@ -1,0 +1,27 @@
+- name: Studio Bridge
+  mode: bridge
+  port: 51827
+  filter:
+    include_entities:
+      - alarm_control_panel.aqara_hub_m2_dfd4
+      - switch.wall_switch
+      - switch.wall_switch_2
+      - switch.wall_switch_3
+      - switch.wall_switch_4
+      - binary_sensor.motion_sensor
+- name: Living Room Bridge
+  mode: bridge
+  port: 51828
+  filter:
+    include_entities:
+      - sensor.temperature_sensor_humidity
+      - sensor.temperature_sensor_temperature
+      - switch.fan_outlet
+      - fan.bedroom_fan
+      - vacuum.sao_di_ji_jie_ren
+  entity_config:
+    switch.fan_outlet:
+      name: Fan Outlet
+      type: outlet
+    vacuum.sao_di_ji_jie_ren:
+      name: 掃地機器人

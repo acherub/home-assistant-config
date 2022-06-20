@@ -1,0 +1,40 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+fan:
+  - platform: template
+    fans:
+      bedroom_fan:
+        friendly_name: "Virtual Fan"
+        value_template: "on"
+        oscillating_template: "{{ states('input_select.osc') }}"
+        turn_on:
+          service: script.fan_power_on
+        turn_off:
+          service: script.fan_power_on
+        set_preset_mode:
+          service: script.fan_smart
+          data:
+            preset_mode: "{{ preset_mode }}"
+        set_oscillating:
+          service: script.fan_swing
+          data:
+            oscillating: "{{ oscillating }}"
+
+homekit: !include homekit.yaml
+
+lovelace:
+  resources:
+    - url: /hacsfiles/lovelace-multiple-entity-row/multiple-entity-row.js
+      type: module

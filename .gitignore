@@ -1,0 +1,20 @@
+# Share this file
+!.gitignore
+
+# Generic ignores
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.pyc
+*.pickle
+._*
+__pycache__
+home-assistant.log.*
+
+# Ignore Sensitive Files
+secrets.yaml
+known_devices.yaml
+entity_registry.yaml
+ip_bans.yaml
+customize.yaml

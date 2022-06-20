@@ -1,0 +1,55 @@
+fan_power_on:
+  alias: fan_power_on
+  sequence:
+    - service: remote.send_command
+      data:
+        device: teco_fan
+        command: power
+      target:
+        device_id: 9bc4453263d2ca131bafe331e8f80dd5
+  mode: single
+  icon: mdi:fan
+fan_up:
+  alias: fan_up
+  sequence:
+    - service: remote.send_command
+      data:
+        device: teco_fan
+        command: fan_up
+      target:
+        device_id: 9bc4453263d2ca131bafe331e8f80dd5
+  mode: single
+  icon: mdi:fan-chevron-up
+fan_down:
+  alias: fan_down
+  sequence:
+    - service: remote.send_command
+      data:
+        device: teco_fan
+        command: fan_down
+      target:
+        device_id: 9bc4453263d2ca131bafe331e8f80dd5
+  mode: single
+  icon: mdi:fan-chevron-down
+fan_swing:
+  alias: Fan swing
+  sequence:
+    - service: remote.send_command
+      data:
+        device: teco_fan
+        command: swing
+      target:
+        device_id: 9bc4453263d2ca131bafe331e8f80dd5
+  mode: single
+  icon: mdi:fan-auto
+fan_smart:
+  alias: Fan Smart
+  sequence:
+    - service: remote.send_command
+      data:
+        device: teco_fan
+        command: smart
+      target:
+        device_id: 9bc4453263d2ca131bafe331e8f80dd5
+  mode: single
+  icon: mdi:fan-auto
